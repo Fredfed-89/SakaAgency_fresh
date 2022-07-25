@@ -1,13 +1,22 @@
 import Swiper from 'swiper/bundle';
 
 const swiper = new Swiper('.swiper', {
-  // modules: [Navigation, Pagination],
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: 'true',
   },
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    }
+  }
 });
