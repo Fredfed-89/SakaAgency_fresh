@@ -39,31 +39,39 @@
     line-height: 1.9;
   }
 
-  &__icon-link {
-    @include bg-cover;
+  &__icons {
+    @include flex;
+  }
 
+  &__icon-item {
     position: relative;
+    display: flex;
+    width: 32px;
+    height: 32px;
 
     &:not(:last-child) {
       margin-right: 10px;
     }
+  }
+
+  &__icon-link {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &--insta {
-      &::before {
-        content: url("../img/insta.svg");
-      }
+      background-image: url("../img/insta.svg");
     }
 
     &--dribble {
-      &::before {
-        content: url("../img/dribble.svg");
-      }
+      background-image: url("../img/dribble.svg");
     }
 
     &--youtube {
-      &::before {
-        content: url("../img/youtube.svg");
-      }
+      background-image: url("../img/youtube.svg");
     }
   }
 
@@ -76,7 +84,6 @@
     }
 
     @include mobile-m {
-      // margin-right: 20px;
       margin-bottom: 30px;
     }
   }
@@ -101,6 +108,11 @@
     font-size: 16px;
     line-height: 1.5;
     color: var(--color-white);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-btn);
+    }
   }
 
   &__support-inner {

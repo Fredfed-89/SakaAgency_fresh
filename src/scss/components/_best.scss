@@ -18,6 +18,11 @@
 
   &__link {
     white-space: nowrap;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-btn);
+    }
   }
 
   &__list {
@@ -33,6 +38,13 @@
   }
 
   &__list-item {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(60, 27, 30, 0.9);
+      opacity: 0.5;
+    }
+
     @include mobile-l {
       margin: 0 auto;
     }

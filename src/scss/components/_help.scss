@@ -124,6 +124,7 @@
     padding-right: 40px;
     font-size: 14px;
     line-height: 1.4;
+    transition: color 0.2s ease-in-out;
 
     &::after {
       content: url("../img/arrow-link.svg");
@@ -132,6 +133,10 @@
       top: 0;
       width: 20px;
       height: 20px;
+    }
+
+    &:hover {
+      color: var(--color-btn);
     }
   }
 }
