@@ -1,0 +1,138 @@
+.header {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 120;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 7px;
+  background-color: var(--color-body);
+
+  @include macbook {
+    margin-bottom: 0;
+  }
+
+  @include mobile-s {
+    margin-bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+
+  &__inner {
+    @include flex-h-sb;
+  }
+
+  &__nav {
+    @include flex-all-sb;
+  }
+
+  &__list {
+    @include flex-h-sb;
+
+    @include macbook {
+      position: absolute;
+      padding-top: 70px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+      background-color: var(--color-body);
+      transition: 0.3s;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include macbook {
+        padding: 8px;
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(5) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-white);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-btn);
+    }
+
+    @include macbook {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__btn {
+    margin-left: 130px;
+
+    @include old-desktop {
+      margin-left: 60px;
+    }
+
+    @include macbook {
+      margin-left: 0;
+    }
+  }
+}
+
+.hamburger {
+  position: relative;
+  display: none;
+  z-index: 110;
+
+  @include macbook {
+    display: block;
+  }
+
+  @include mobile-s {
+    top: -3px;
+  }
+}
+
+.hamburger-label {
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+  text-transform: uppercase;
+
+  @include mobile-s {
+    display: none;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: var(--color-white);
+}
+
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger--elastic.is-active .hamburger-inner {
+  background-color: var(--color-white);
+}
+
+.is-active {
+  transform: translateX(0%);
+}

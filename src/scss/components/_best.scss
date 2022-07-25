@@ -1,0 +1,62 @@
+.best {
+  &__title-inner {
+    @include flex-h-sb;
+
+    align-items: flex-end;
+    margin-bottom: 50px;
+
+    @include mobile-s {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    width: 100%;
+    max-width: 430px;
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: $br10;
+
+    @include mobile-l {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__list-item {
+    @include mobile-l {
+      margin: 0 auto;
+    }
+  }
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  &::after {
+    content: url("../img/arrow-link.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  @include mobile-s {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,89 @@
+.hero {
+  margin-top: 130px;
+
+  @include macbook {
+    margin-top: 90px;
+  }
+
+  @include mobile-s {
+    margin-top: 70px;
+  }
+
+  &__bg {
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1140px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background: linear-gradient(106.17deg, rgba(40, 40, 40, 0.56) -25.28%, rgba(38, 38, 38, 0.24) 123.88%);
+      opacity: 0.5;
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 745px;
+
+    @include macbook {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include mobile-m {
+      padding-top: 150px;
+      padding-bottom: 70px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 61px;
+    line-height: 1.5;
+
+    @include mobile-m {
+      font-size: 42px;
+    }
+
+    @include mobile-s {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 740px;
+    font-size: 20px;
+    line-height: 1.9;
+
+    @include mobile-s {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 157px;
+  }
+}

@@ -1,0 +1,163 @@
+.footer {
+  margin-bottom: 30px;
+
+  &__line {
+    margin-bottom: 45px;
+    border-bottom: 2px solid var(--color-black);
+  }
+
+  &__inner {
+    @include flex-h-sb;
+
+    @include macbook {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__copyright-inner {
+    display: block;
+    width: 100%;
+    max-width: 210px;
+
+    @include mobile-m {
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo-link {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  &__copy {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  &__icon-link {
+    @include bg-cover;
+
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--insta {
+      &::before {
+        content: url("../img/insta.svg");
+      }
+    }
+
+    &--dribble {
+      &::before {
+        content: url("../img/dribble.svg");
+      }
+    }
+
+    &--youtube {
+      &::before {
+        content: url("../img/youtube.svg");
+      }
+    }
+  }
+
+  &__nav-inner {
+    width: 100%;
+    max-width: 95px;
+
+    @include macbook {
+      margin-right: 20px;
+    }
+
+    @include mobile-m {
+      // margin-right: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-white);
+  }
+
+  &__support-inner {
+    width: 100%;
+    max-width: 205px;
+
+    @include mobile-m {
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input-inner {
+    width: 100%;
+    max-width: 255px;
+
+    @include mobile-m {
+      margin-right: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+    @include flex;
+
+    position: relative;
+    width: 100%;
+    max-width: 255px;
+  }
+
+  &__input {
+    position: relative;
+    border: transparent;
+    border-radius: 8px;
+    padding: 10px 110px 10px 10px;
+    width: 100%;
+    max-width: 255px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-place);
+    background-color: var(--color-bg-place);
+
+    &::-webkit-input-placeholder {
+      color: var(--color-place);
+    }
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/send-icon.svg");
+  }
+}

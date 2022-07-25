@@ -1,0 +1,78 @@
+.customer {
+  &__inner {
+    @include flex-h-sb;
+
+    flex-wrap: wrap;
+  }
+
+  &__descr {
+    @include flex-v-center;
+
+    width: 100%;
+    max-width: 490px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 370px;
+  }
+
+  &__text {
+    margin: 0;
+    width: 100%;
+    max-width: 440px;
+  }
+
+  &__author {
+    position: relative;
+    border-radius: $br10;
+    padding: 125px 45px 55px 25px;
+    width: 100%;
+    max-width: 570px;
+    background-color: var(--color-black);
+
+    &::before {
+      content: url("../img/author-quotes.svg");
+      position: absolute;
+      right: 45px;
+      top: 35px;
+      z-index: 3;
+      background-size: 80px 68px;
+    }
+  }
+
+  &__author-inner {
+    @include flex;
+
+    margin-bottom: 15px;
+  }
+
+  &__author-photo {
+    margin-right: 20px;
+  }
+
+  &__author-name {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  &__author-position {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &__author-text {
+    margin: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 500px;
+    font-weight: 300;
+    line-height: 1.9;
+  }
+}
