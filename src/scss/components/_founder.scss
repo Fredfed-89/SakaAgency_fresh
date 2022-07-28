@@ -20,6 +20,10 @@
     column-gap: 25px;
     flex-wrap: wrap;
 
+    img {
+      max-width: none;
+    }
+
     @include old-desktop {
       justify-content: center;
     }

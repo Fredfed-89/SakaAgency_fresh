@@ -38,24 +38,9 @@
     max-width: 440px;
   }
 
-  &__slide {
-    border-radius: 10px;
+  &__list {
     max-width: 570px;
     width: 100%;
-
-    @include mobile-m {
-      margin-left: 5px;
-      max-width: 360px;
-    }
-
-    @include mobile-s {
-      margin-left: 0;
-      max-width: 345px;
-    }
-
-    @include mobile-xs {
-      max-width: 280px;
-    }
   }
 
   &__author {

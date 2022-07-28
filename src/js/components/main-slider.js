@@ -9,6 +9,9 @@ const swiper = new Swiper('.swiper', {
     type: 'bullets',
     clickable: 'true',
   },
+  autoplay: {
+    delay: 5040,
+  },
   breakpoints: {
     375: {
       slidesPerView: 1,
