@@ -4,3 +4,4 @@ import './_functions';
 import './_components';
 import './components/main-slider';
 import './components/hamburger';
+import './components/animation';
